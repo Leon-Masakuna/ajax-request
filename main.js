@@ -65,6 +65,6 @@ function getPreview(avatar_url, name) {
 function getError(searchText) {
   return ` 
   <div class="content">
-    <p>Aucun résultat trouvé pour "${searchText}"</p>
+    <p>Aucun résultat trouvé concernant "${searchText}"</p>
   </div>`;
 }
