@@ -45,8 +45,8 @@ function getResult(searchText) {
         }
       })
       .then((res) => {
-        const { avatar_url, name } = res;
-        previewArea.innerHTML = getPreview(avatar_url, name);
+        const { avatar_url, name, login } = res;
+        previewArea.innerHTML = getPreview(avatar_url, name, login);
       })
       .catch((e) => {
         previewArea.innerHTML = getError(searchText);
@@ -54,11 +54,11 @@ function getResult(searchText) {
   }
 }
 
-function getPreview(avatar_url, name) {
+function getPreview(avatar_url, name, login) {
   return ` 
   <div class="content">
     <img src="${avatar_url}" alt="${name}" />
-    <p>Profil de : ${name}</p>
+    <p>Profil de : ${name} and ${login}</p>
   </div>`;
 }
 
